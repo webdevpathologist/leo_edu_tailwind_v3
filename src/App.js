@@ -6,8 +6,8 @@ import GoogleMap from "./components/mapContainer/mapView";
 function App() {
   return (
     <div className="font-mono ">
+      <Header />
       <div className="md:container md:mx-auto px-25 py-7">
-        <Header />
         <CardContainer />
         <div className="md:container md:mx-auto px-25 py-7">
           <div className="grid grid-cols-2">
