@@ -27,7 +27,7 @@ export default function Card(props) {
 
   return(
     <div className="rounded-md overflow-hidden shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105 bg-green-50">
-        <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/>
+        {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
         <div className="px-6 py-6">
             <div className="font-bold text-xl mb-2">{card_data.title}</div>
             <p className="text-gray-700 text-base">

@@ -39,5 +39,13 @@ export const card_data=[
         "tags":[],
         "css":"w-full h-3/5",
     },
+    {
+        "title":"Coming Soon",
+        "imageCode":4,
+        "imageInvalid":"",
+        "description":"We are including new courses gradually. Watch this space for updates",
+        "tags":[],
+        "css":"w-full h-3/5",
+    },
         
 ]
