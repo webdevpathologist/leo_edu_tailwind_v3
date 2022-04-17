@@ -1,18 +1,22 @@
 import Header from "./components/header/header";
-import CardContainer from "./components/card/card.container";
+import About from "./sections/about";
+import Courses from './sections/courses';
 import ContactUs from './sections/contact';
-// import ContactForm from "./components/contactForm/contactForm";
 // import GoogleMap from "./components/mapContainer/mapView";
+// import OpenStreetMap from "./components/mapContainer/openStreetMap";
+// import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
     <div className="font-mono">
       <Header />
-      <div className="md:container md:mx-auto px-25 py-4">
-        <CardContainer />
-        <ContactUs />
-        {/* <GoogleMap /> */}
-      </div>
+      <About/>
+      <Courses />
+      <ContactUs />
+      {/* <GoogleMap/> */}
+      {/* <OpenStreetMap/> */}
     </div>
   );
 }

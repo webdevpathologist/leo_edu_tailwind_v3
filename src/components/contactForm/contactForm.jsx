@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from 'react-hot-toast';
 
-let renderCount = 0;
+// let renderCount = 0;
 
 export default function ContactForm(props) {
 
@@ -29,7 +29,7 @@ export default function ContactForm(props) {
 
     }
 
-    console.log(errors);
+    // console.log(errors);
 
     useEffect(()=>{
         console.log(txtmsg);
@@ -75,8 +75,8 @@ export default function ContactForm(props) {
 
     const inputStyle="mt-3 block w-full rounded-md border-green-300 shadow-sm focus:border-cyan-300 focus:ring focus:ring-cyan-200 focus:ring-opacity-50"
     
-    renderCount++;
-    console.log(renderCount);
+    // renderCount++;
+    // console.log(renderCount);
 
     return(
         <div className="flex items-center justify-center justify-items-center py-6 ">

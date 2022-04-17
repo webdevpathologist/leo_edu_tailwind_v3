@@ -26,20 +26,20 @@ export default function Card(props) {
   const card_data=props.data;
 
   return(
-    <div className="rounded-md overflow-hidden shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105 bg-green-50">
+    <div className="rounded-md overflow-hidden shadow-md shadow-emerald-100 hover:shadow-lg hover:shadow-emerald-400 transform transition duration-300 hover:scale-105 bg-green-50">
         {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
         <div className="px-6 py-6">
-            <div className="font-bold text-xl mb-2">{card_data.title}</div>
+            <div className="font-bold text-xl mb-2 flex justify-center">{card_data.title}</div>
             <p className="text-gray-700 text-base">
             {card_data.description}
             </p>
         </div>
-        <div className="px-4 pt-2 pb-2">
+        <div className="px-4 pt-2 pb-2 flex justify-center">
           {
             card_data.tags
             ?
             card_data.tags.map((ele,id)=>{
-              return (<span key={id} className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{ele}</span>)
+              return (<span key={id} className="inline-block bg-emerald-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{ele}</span>)
             })
             :
             <></> 

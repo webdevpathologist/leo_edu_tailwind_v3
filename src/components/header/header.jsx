@@ -29,7 +29,7 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <div className="flex items-center justify-between border-b border-gray-400 py-8 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
+    <div className="flex items-center justify-between border-b border-gray-300 py-8 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
       {/* */}
       <a href="/">
         <h1 className="font-mono font-bold lg:text-5xl sm:text-3xl flex sm:justify-center uppercase"><GiLion/> The Leo's Educational Academy</h1>
@@ -53,7 +53,7 @@ export default function Header() {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-gray-600 fill-green-400"
+                className="h-8 w-8 text-gray-600 fill-green-200"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -66,15 +66,15 @@ export default function Header() {
               </svg>
             </div>
             {/* */}
-            <ul className="flex flex-col items-center justify-between min-h-[250px]">
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="#" className="lg:text-1xl text-green-400 hover:text-cyan-600">About Us</a>
+            <ul className="flex flex-col items-center justify-between min-h-[250px] text-4xl">
+              <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
+                <a href="#contact" className="lg:text-1xl text-green-400 hover:text-cyan-600">About Us</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="#" className="lg:text-1xl text-green-400 hover:text-cyan-600">Courses</a>
+              <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
+                <a href="#course" className="lg:text-1xl text-green-400 hover:text-cyan-600">Courses</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="#" className="lg:text-1xl text-green-400 hover:text-cyan-600">Contact Us</a>
+              <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
+                <a href="#contact" className="lg:text-1xl text-green-400 hover:text-cyan-600">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -83,10 +83,10 @@ export default function Header() {
         {/* */}
         <ul className="text-lg font-light hidden space-x-8 px-4 lg:flex">
           <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About Us</a>
+            <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About Us</a>
           </li>
           <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#courses" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Courses</a>
+            <a href="#course" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Courses</a>
           </li>
           <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Contact Us</a>
