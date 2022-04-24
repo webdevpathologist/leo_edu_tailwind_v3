@@ -10,7 +10,7 @@ import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
-    <div className="font-mono">
+    <div className="font-mono dark:font-normal dark:bg-slate-600">
       <Header />
       <About/>
       <Courses />

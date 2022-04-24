@@ -23,6 +23,7 @@
 
 import { useState } from "react";
 import {GiLion} from 'react-icons/gi';
+import DarkModeToggle from '../darkMode/darkModeToggle';
 
 export default function Header() {
   
@@ -32,7 +33,7 @@ export default function Header() {
     <div className="flex items-center justify-between border-b border-gray-300 py-8 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
       {/* */}
       <a href="/">
-        <h1 className="font-mono font-bold lg:text-5xl sm:text-3xl flex sm:justify-center uppercase"><GiLion/> The Leo's Educational Academy</h1>
+        <h1 className="font-mono font-bold lg:text-5xl sm:text-4xl flex sm:justify-center uppercase"> The Leo's Educational Academy</h1>
       </a>
       <nav className="">
         {/* */}
@@ -42,9 +43,9 @@ export default function Header() {
             className="space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-4 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 bg-green-600"></span>
+            <span className="block h-0.5 w-6 bg-green-600"></span>
+            <span className="block h-0.5 w-8 bg-green-600"></span>
           </div>
           {/* */}
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -68,7 +69,7 @@ export default function Header() {
             {/* */}
             <ul className="flex flex-col items-center justify-between min-h-[250px] text-4xl">
               <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
-                <a href="#contact" className="lg:text-1xl text-green-400 hover:text-cyan-600">About Us</a>
+                <a href="#about" className="lg:text-1xl text-green-400 hover:text-cyan-600">About Us</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
                 <a href="#course" className="lg:text-1xl text-green-400 hover:text-cyan-600">Courses</a>
@@ -81,15 +82,18 @@ export default function Header() {
         </section>
 
         {/* */}
-        <ul className="text-lg font-light hidden space-x-8 px-4 lg:flex">
+        <ul className="text-lg font-light hidden space-x-8 px-4 lg:flex items-center justify-between">
           <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About Us</a>
+            <a href="#about" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About Us</a>
           </li>
           <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#course" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Courses</a>
           </li>
           <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Contact Us</a>
+          </li>
+          <li className="">
+            <DarkModeToggle/>
           </li>
         </ul>
       </nav>
