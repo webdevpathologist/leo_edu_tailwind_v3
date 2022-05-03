@@ -73,7 +73,7 @@ export default function ContactForm(props) {
         }
     },[txtmsg]);
 
-    const inputStyle="mt-3 block w-full rounded-md border-green-300 shadow-sm focus:border-cyan-300 focus:ring focus:ring-cyan-200 focus:ring-opacity-50"
+    const inputStyle="mt-1 mb-4 block w-full rounded-md border-green-300 shadow-sm focus:border-cyan-300 focus:ring focus:ring-cyan-200 focus:ring-opacity-50"
     
     // renderCount++;
     // console.log(renderCount);
@@ -81,9 +81,10 @@ export default function ContactForm(props) {
     return(
         <div className="flex items-center justify-center justify-items-center py-6 ">
             <form className="shadow-lg rounded px-8 py-4 mb-2 bg-green-50" onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="block font-bold text-xl text-center"> Get in Touch with Us </h1>
+                <h1 className="block font-bold text-2xl text-center"> Get in Touch with Us </h1>
                 <br/>
-                <input type="text" className={inputStyle} placeholder="Full name" 
+                <label>Full Name</label>
+                <input type="text" className={inputStyle} //placeholder="Full name" 
                 {...register("fullName", 
                     {
                         required: {
@@ -98,7 +99,8 @@ export default function ContactForm(props) {
                 } />
                 {(errors.fullName && errors.fullName.type==="maxLength")?(<p className="mt-2 mb-2">{errors.fullName.message}</p>):<></>}
                 {(errors.fullName && errors.fullName.type==="required")?(<p className="mt-2 mb-2">{errors.fullName.message}</p>):<></>}
-                <input type="tel" className={inputStyle} placeholder="Mobile number" 
+                <label>Mobile Number</label>
+                <input type="tel" className={inputStyle} //placeholder="Mobile number" 
                 {...register("mobileNumber", 
                     {
                         required: {
@@ -118,7 +120,8 @@ export default function ContactForm(props) {
                 {(errors.mobileNumber && errors.mobileNumber.type==="pattern")?(<p className="mt-2 mb-2">{errors.mobileNumber.message}</p>):<></>}
                 {(errors.mobileNumber && errors.mobileNumber.type==="maxLength")?(<p className="mt-2 mb-2">{errors.mobileNumber.message}</p>):<></>}
                 {(errors.mobileNumber && errors.mobileNumber.type==="required")?(<p className="mt-2 mb-2">{errors.mobileNumber.message}</p>):<></>}
-                <input type="text" className={inputStyle} placeholder="Email" 
+                <label className="py-4">Email Address</label>
+                <input type="text" className={inputStyle} //placeholder="Email" 
                 {...register("email", 
                     { 
                         pattern: {
@@ -128,7 +131,7 @@ export default function ContactForm(props) {
                     })
                 } />
                 {(errors.email && errors.email.type==="pattern")?(<p className="mt-2 mb-2">{errors.email.message}</p>):<></>}
-                <button className="uppercase px-1 py-1 mt-4 mb-4 bg-transparent border-2 border-green-500 text-sm rounded-lg transition-colors duration-200 transform hover:bg-green-500 hover:text-gray-100 focus:border-4 focus:border-green-300" type='submit'>Submit</button>
+                <button className="justify-items-center uppercase px-1 py-1 mt-4 mb-4 bg-transparent border-2 border-green-500 text-sm rounded-lg transition-colors duration-200 transform hover:bg-green-500 hover:text-gray-100 focus:border-4 focus:border-green-300" type='submit'>Submit</button>
             </form>
             <Toaster position="top-right"/>
         </div>

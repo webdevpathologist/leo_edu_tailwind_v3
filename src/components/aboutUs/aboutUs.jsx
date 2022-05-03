@@ -30,7 +30,7 @@ export default function AboutUs() {
 
   return (
     <div className="flex items-center justify-between px-2 text-1xl">
-        How are you..??    
+        We, 
     </div>
   );
 }

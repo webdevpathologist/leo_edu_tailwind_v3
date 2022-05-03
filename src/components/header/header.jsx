@@ -69,13 +69,13 @@ export default function Header() {
             {/* */}
             <ul className="flex flex-col items-center justify-between min-h-[250px] text-4xl">
               <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
-                <a href="#about" className="lg:text-1xl text-green-400 hover:text-cyan-600">About Us</a>
+                <a href="#about" className="lg:text-1xl text-green-400 hover:text-cyan-600">About</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
                 <a href="#course" className="lg:text-1xl text-green-400 hover:text-cyan-600">Courses</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
-                <a href="#contact" className="lg:text-1xl text-green-400 hover:text-cyan-600">Contact Us</a>
+                <a href="#contact" className="lg:text-1xl text-green-400 hover:text-cyan-600">Contact</a>
               </li>
             </ul>
           </div>
@@ -83,14 +83,14 @@ export default function Header() {
 
         {/* */}
         <ul className="text-lg font-light hidden space-x-8 px-4 lg:flex items-center justify-between">
-          <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#about" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About Us</a>
+          <li className="border border-transparent hover:rounded-full hover:border-green-600 hover:bg-green-400 transition-all duration-75">
+            <a href="#about" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About</a>
           </li>
-          <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
+          <li className="border border-transparent hover:rounded-full hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#course" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Courses</a>
           </li>
-          <li className="border border-transparent hover:rounded-lg hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Contact Us</a>
+          <li className="border border-transparent hover:rounded-full hover:border-green-600 hover:bg-green-400 transition-all duration-75">
+            <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Contact</a>
           </li>
           <li className="">
             <DarkModeToggle/>
