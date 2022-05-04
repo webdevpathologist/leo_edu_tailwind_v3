@@ -4,11 +4,8 @@ import {Popup} from 'react-leaflet';
 const MarkerPopup = (props) => {
   const { name } = props.data;
   console.log(name);
-  // LEOS EDUCATIONAL ACADEMY
-  // 136A, WHITE AVENUE, 4th St, Sikkandar Savadi, Madurai, Tamil Nadu 625018
-  // 9.980340, 78.096751
   const showInMapClicked=()=>{
-    window.open(`https://maps.google.com?q=${9.980313},${78.096799}`);
+    window.open(`https://maps.google.com?q=${9.980341},${78.096772}`);
   };
 
   return  (<Popup>

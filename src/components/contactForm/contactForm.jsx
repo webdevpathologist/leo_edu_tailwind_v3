@@ -79,8 +79,8 @@ export default function ContactForm(props) {
     // console.log(renderCount);
 
     return(
-        <div className="flex items-center justify-center justify-items-center py-6 ">
-            <form className="shadow-lg rounded px-8 py-4 mb-2 bg-green-50" onSubmit={handleSubmit(onSubmit)}>
+        <div className="flex items-center justify-center justify-items-center">
+            <form className="shadow-lg rounded-lg px-8 py-4 bg-green-50" onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="block font-bold text-2xl text-center"> Get in Touch with Us </h1>
                 <br/>
                 <label>Full Name</label>
