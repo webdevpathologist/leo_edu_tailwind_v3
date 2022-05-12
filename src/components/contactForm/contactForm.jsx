@@ -32,7 +32,7 @@ export default function ContactForm(props) {
     // console.log(errors);
 
     useEffect(()=>{
-        console.log(txtmsg);
+        // console.log(txtmsg);
         if (txtmsg && txtmsg!==''){
             const url="https://api.telegram.org/bot"+process.env.REACT_APP_BOT_TOKEN+"/sendMessage";
             // console.log(url);
