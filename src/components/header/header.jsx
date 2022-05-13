@@ -30,13 +30,13 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <div className="flex items-center justify-between border-b border-gray-300 py-8 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
-      {/* */}
+    <header className="flex items-center justify-between border-b border-gray-300 py-7 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-xl bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
+      {/* Company Name */}
       <a href="/">
         <h1 className="font-mono font-bold lg:text-5xl sm:text-4xl flex sm:justify-center uppercase"> The Leo's Educational Academy</h1>
       </a>
       <nav className="">
-        {/* */}
+        {/* SideNav starts */}
         <section className="flex lg:hidden sm:justify-between">
           {/* */}
           <div
@@ -80,23 +80,25 @@ export default function Header() {
             </ul>
           </div>
         </section>
+        {/* SideNav ends */}
 
-        {/* */}
+        {/* Navbar starts */}
         <ul className="text-lg font-light hidden space-x-8 px-4 lg:flex items-center justify-between">
-          <li className="border border-transparent hover:rounded-full hover:border-green-600 hover:bg-green-400 transition-all duration-75">
+          <li className="border border-transparent hover:rounded-full hover:p-1 hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#about" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About</a>
           </li>
-          <li className="border border-transparent hover:rounded-full hover:border-green-600 hover:bg-green-400 transition-all duration-75">
+          <li className="border border-transparent hover:rounded-full hover:p-1 hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#course" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Courses</a>
           </li>
-          <li className="border border-transparent hover:rounded-full hover:border-green-600 hover:bg-green-400 transition-all duration-75">
+          <li className="border border-transparent hover:rounded-full hover:p-1 hover:border-green-600 hover:bg-green-400 transition-all duration-75">
             <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Contact</a>
           </li>
           <li className="">
             <DarkModeToggle/>
           </li>
         </ul>
+        {/* Navbar starts */}
       </nav>
-    </div>
+    </header>
   );
 }

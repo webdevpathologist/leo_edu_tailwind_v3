@@ -3,7 +3,7 @@ export const card_data=[
         "title":"Abacus",
         "imageCode":1,
         "imageInvalid":"couldn't find the image",
-        "description":"Abacus aims to develop brain by helping you improve your calculations, abilities, and mental arithmetic",
+        "description":"Abacus aims to develop brain by helping you improve your calculations, mental arithmetic abilities",
         "tags":["Walkers","Joggers","Sprinters"],
         "css":"w-full h-3/5",
     },
