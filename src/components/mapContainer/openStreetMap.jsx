@@ -16,13 +16,13 @@ class MapView extends Component {
         lng: 78.096740 },
       zoom: 11,
     }
-  }
+    }
 
   render() {
     const { currentLocation, zoom } = this.state;
 
     return (
-      <div className='rounded-lg shadow-md shadow-emerald-400/50 w-full h-full px-2 py-2 bg-green-100'>
+      <div className='rounded-lg shadow-md shadow-emerald-400/50 md:w-full md:h-full sm:w-full sm:h-80 xs:h-80 px-2 py-2 bg-green-100'>
       <Map center={currentLocation} zoom={zoom} scrollWheelZoom={false} className="w-full h-full">
 
         <TileLayer

@@ -3,7 +3,6 @@ import {Popup} from 'react-leaflet';
 
 const MarkerPopup = (props) => {
   const { name } = props.data;
-  console.log(name);
   const showInMapClicked=()=>{
     window.open(`https://maps.google.com?q=${9.980341},${78.096772}`);
   };
