@@ -37,7 +37,7 @@ export default function DarkModeToggle() {
       className="w-10 h-10 flex items-center justify-center rounded-lg shadow-lg cursor-pointer text-slate-200 bg-gray-600 dark:bg-gray-500 dark:text-yellow-200"
       onClick={changeTheme}
     >
-      <h3 className="text-2xl">
+      <h3 className={(theme === "light") ? "text-xl" : "text-2xl"}>
         {theme === "light" ? <BsMoonStarsFill /> : <FaSun />}
       </h3>
     </div>

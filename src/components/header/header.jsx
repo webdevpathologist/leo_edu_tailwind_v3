@@ -1,26 +1,3 @@
-// import {GiLion} from 'react-icons/gi';
-
-
-// export default function Header(props) {
-
-
-//     return(
-//     <nav className="sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 flex justify-left px-2 py-5 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
-//         {/* <h2 className="md:text-5xl sm:text-4xl px-3 dark:text-white" style={{transform:"scaleX(-1)",verticalAlign:"Bottom"}}><GiLion/> </h2>
-//         <h1 className="font-mono lg:text-5xl md:text-4xl flex text-opacity-80 uppercase dark:text-white">The Leo's Educational Academy</h1>
-//         <h2 className="md:text-5xl sm:text-4xl px-3 dark:text-white" ><GiLion/> </h2> */}
-//         <h2 className="md:text-5xl sm:text-4xl px-3" ><GiLion/> </h2>
-//         <h1 className="font-mono font-bold lg:text-5xl md:text-4xl flex uppercase">The Leo's Educational Academy</h1>
-//         <div className="justify-right text-1xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
-//           <a href="#"> About Us </a>
-//           <a href="#"> Courses </a>
-//           <a href="#"> Contact Us </a>
-//         </div>
-//     </nav>
-//     )
-    
-// }
-
 import { useState } from "react";
 import {GiLion} from 'react-icons/gi';
 import DarkModeToggle from '../darkMode/darkModeToggle';
@@ -32,9 +9,10 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between border-b border-gray-300 py-7 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-xl bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
       {/* Company Name */}
-      <a href="/">
-        <h1 className="font-mono font-bold lg:text-5xl sm:text-4xl flex sm:justify-center uppercase"> The Leo's Educational Academy</h1>
-      </a>
+      <h1 className="font-bold lg:text-5xl sm:text-4xl flex sm:justify-center uppercase">
+        <GiLion className="text-emerald-400"/><br/>
+        <a href="/"> The Leo's Educational Academy</a>
+      </h1>
       <nav className="">
         {/* SideNav starts */}
         <section className="flex lg:hidden sm:justify-between">

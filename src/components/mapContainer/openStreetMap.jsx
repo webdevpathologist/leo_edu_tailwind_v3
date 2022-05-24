@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import { Map, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import mapData from './data.json';
-import Markers from './VenueMarkers';
+import React, { Component } from "react";
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+// import mapData from './data.json';
+import { VenueLocationIcon } from "./VenueLocationIcon";
+import Markers from "./VenueMarkers";
 
 // LEOS EDUCATIONAL ACADEMY
 // 136A, WHITE AVENUE, 4th St, Sikkandar Savadi, Madurai, Tamil Nadu 625018
@@ -12,26 +13,64 @@ class MapView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentLocation: { lat: 9.980333,
-        lng: 78.096740 },
+      mapData: {
+        name: "The Leo's Educational Academy",
+        description: "",
+        geometry: [9.980333, 78.09674],
+      },
       zoom: 11,
-    }
-    }
+    };
+  }
+
+  getMapPins(arrValue){
+    const latValue=arrValue?.[0];
+    const lngValue=arrValue?.[1];
+
+    return {lat:latValue,lng:lngValue}
+    
+  }
+
+  showInMapClicked() {
+    window.open(`https://maps.google.com?q=${9.980333},${78.09674}`);
+  }
 
   render() {
-    const { currentLocation, zoom } = this.state;
+    const { mapData, zoom } = this.state;
+    console.log(mapData);
 
     return (
-      <div className='rounded-lg shadow-md shadow-emerald-400/50 md:w-full md:h-full sm:w-full sm:h-80 xs:h-80 px-2 py-2 bg-green-100'>
-      <Map center={currentLocation} zoom={zoom} scrollWheelZoom={false} className="w-full h-full">
+      <div className="rounded-lg shadow-md shadow-emerald-400/50 md:w-full md:h-full sm:w-full sm:h-80 xs:h-80 px-2 py-2 bg-green-100">
+        <Map
+          center={this.getMapPins(mapData?.geometry)}
+          zoom={zoom}
+          scrollWheelZoom={false}
+          className="w-full h-full"
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
 
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-        />
-
-        <Markers venues={mapData.venues}/>
-      </Map>
+          {/* <Markers venues={mapData.venues}/> */}
+          <Marker
+            position={mapData?.geometry}
+            icon={VenueLocationIcon}
+          >
+            {/* <MarkerPopup data={mapData.venue}/> */}
+            <Popup>
+              <div className="poup-text">
+                {mapData?.name}
+                <br />
+                <button
+                  className="rounded-lg text-blue-600 px-1 underline underline-offset-1"
+                  onClick={this.showInMapClicked}
+                >
+                  Open in Google Maps
+                </button>
+              </div>
+            </Popup>
+          </Marker>
+        </Map>
       </div>
     );
   }

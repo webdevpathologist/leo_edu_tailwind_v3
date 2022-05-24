@@ -7,7 +7,7 @@ import "leaflet/dist/leaflet.css";
 
 function App() {
   return (
-    <div className="font-mono bg-white dark:bg-slate-900">
+    <div className="font-poppins bg-white dark:bg-slate-700">
       <Header />
       <main className="px-25 py-px">
         <About />
