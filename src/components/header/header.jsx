@@ -10,7 +10,7 @@ export default function Header() {
     <header className="flex items-center justify-between border-b border-gray-300 py-7 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-xl bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
       {/* Company Name */}
       <h1 className="font-bold lg:text-5xl sm:text-4xl flex sm:justify-center uppercase">
-        <GiLion className="text-emerald-400"/><br/>
+        <GiLion className="text-emerald-400 mx-4"/><br/>
         <a href="/"> The Leo's Educational Academy</a>
       </h1>
       <nav className="">

@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from 'react-hot-toast';
 
-// let renderCount = 0;
+
 
 export default function ContactForm(props) {
 
@@ -50,7 +50,7 @@ export default function ContactForm(props) {
                                 
             })
             .catch(error =>{
-                console.log(error);
+                // console.log(error);
             });
 
             toast.promise(sendingMsg,
@@ -75,12 +75,11 @@ export default function ContactForm(props) {
 
     const inputStyle="mt-1 mb-4 block w-full rounded-md border-green-300 shadow-sm focus:border-cyan-300 focus:ring focus:ring-cyan-200 focus:ring-opacity-50"
     
-    // renderCount++;
-    // console.log(renderCount);
+    
 
     return(
-        <div className="flex items-center justify-center justify-items-center">
-            <form className="shadow-lg rounded-lg px-8 py-4 bg-green-50" onSubmit={handleSubmit(onSubmit)}>
+        <div className="lg:w-1/3 md:w-1/2 bg-green-100/95 dark:bg-slate-900/95 dark:text-green-400/95 rounded-lg p-4 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-40 shadow-md">
+            <form className="px-8 py-4" onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="block font-bold text-2xl text-center"> Get in Touch with Us </h1>
                 <br/>
                 <label>Full Name</label>

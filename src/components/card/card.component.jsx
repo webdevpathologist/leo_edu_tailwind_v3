@@ -1,12 +1,11 @@
-import RubiksCubeGif from '../../assets/images/RubikCube.gif';
-import AbacusGif from '../../assets/images/Abacus.gif';
-import Calligraphy from '../../assets/images/Calligraphy.jpeg';
-import HandWriting from '../../assets/images/HandWriting.jpeg';
-import VedicMaths from '../../assets/images/VedicMaths.jpg';
+import RubiksCubeGif from "../../assets/images/RubikCube.gif";
+import AbacusGif from "../../assets/images/Abacus.gif";
+import Calligraphy from "../../assets/images/Calligraphy.jpeg";
+import HandWriting from "../../assets/images/HandWriting.jpeg";
+import VedicMaths from "../../assets/images/VedicMaths.jpg";
 
 export default function Card(props) {
-
-  const getImage=(imageNum)=>{
+  const getImage = (imageNum) => {
     switch (imageNum) {
       case 1:
         return AbacusGif;
@@ -21,30 +20,39 @@ export default function Card(props) {
       default:
         break;
     }
-  }
+  };
 
-  const card_data=props.data;
+  const card_data = props.data;
+  // dark:bg-slate-700/95 dark:text-green-400/95
+  // dark:text-green-300/95
 
-  return(
-    <div className="rounded-lg overflow-hidden shadow-md shadow-emerald-400/50 hover:shadow-lg hover:shadow-emerald-400 transform transition duration-300 hover:scale-105 bg-green-50 hover:border-t-8 hover:border-emerald-400 ">
-        {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
-        <div className="px-6 py-6">
-            <div className="font-bold text-xl mb-2 flex justify-center">{card_data.title}</div>
-            <p className="text-gray-700 lg:text-base sm:text-xs">
-            {card_data.description}
-            </p>
+  return (
+    <div className="transform overflow-hidden rounded-lg shadow-md shadow-emerald-400/50 transition duration-300 bg-green-50 hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-400 hover:ring-4 hover:ring-emerald-300 dark:bg-slate-700/95 dark:text-green-400/95 dark:shadow-sm">
+      {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
+      <div className="px-6 py-6">
+        <div className="mb-2 flex justify-center text-2xl font-bold">
+          {card_data.title}
         </div>
-        <div className="px-4 pt-2 pb-2 flex justify-center">
-          {
-            card_data.tags
-            ?
-            card_data.tags.map((ele,id)=>{
-              return (<span key={id} className="inline-block bg-emerald-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{ele}</span>)
-            })
-            :
-            <></> 
-          }
-        </div>
+        <p className="text-gray-700 dark:text-green-300/95 sm:text-xs lg:text-base">
+          {card_data.description}
+        </p>
+      </div>
+      <div className="flex justify-center px-4 pt-2 pb-2">
+        {card_data.tags ? (
+          card_data.tags.map((ele, id) => {
+            return (
+              <span
+                key={id}
+                className="mr-2 mb-2 inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 bg-emerald-100"
+              >
+                {ele}
+              </span>
+            );
+          })
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
-  )
+  );
 }

@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-// import mapData from './data.json';
 import { VenueLocationIcon } from "./VenueLocationIcon";
-import Markers from "./VenueMarkers";
 
 // LEOS EDUCATIONAL ACADEMY
 // 136A, WHITE AVENUE, 4th St, Sikkandar Savadi, Madurai, Tamil Nadu 625018

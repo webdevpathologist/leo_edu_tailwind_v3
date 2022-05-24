@@ -1,4 +1,4 @@
-import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
+import { BsMoonStarsFill } from "react-icons/bs";
 import {FaSun} from "react-icons/fa"
 import { useState, useEffect } from "react";
 // import GetTheme from './getTheme';
