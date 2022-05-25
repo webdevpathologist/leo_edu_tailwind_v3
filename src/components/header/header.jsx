@@ -1,21 +1,21 @@
 import { useState } from "react";
-import {GiLion} from 'react-icons/gi';
-import DarkModeToggle from '../darkMode/darkModeToggle';
+import { GiLion } from "react-icons/gi";
+import DarkModeToggle from "../darkMode/darkModeToggle";
 
 export default function Header() {
-  
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <header className="flex items-center justify-between border-b border-gray-300 py-7 sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-xl bg-opacity-30 px-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-600">
+    <header className="sticky top-0 z-50 flex items-center justify-between border-b border-gray-300 bg-white bg-opacity-30 bg-gradient-to-br from-green-400 to-cyan-600 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter">
       {/* Company Name */}
-      <h1 className="font-bold lg:text-5xl sm:text-4xl flex sm:justify-center uppercase">
-        <GiLion className="text-emerald-400 mx-4"/><br/>
+      <h1 className="flex font-bold uppercase sm:justify-center sm:text-4xl lg:text-5xl">
+        <GiLion className="mx-4 text-emerald-400" />
+        <br />
         <a href="/"> The Leo's Educational Academy</a>
       </h1>
       <nav className="">
         {/* SideNav starts */}
-        <section className="flex lg:hidden sm:justify-between">
+        <section className="flex sm:justify-between lg:hidden">
           {/* */}
           <div
             className="space-y-2"
@@ -32,7 +32,7 @@ export default function Header() {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-gray-600 fill-green-200"
+                className="h-8 w-8 fill-green-200 text-gray-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -45,15 +45,39 @@ export default function Header() {
               </svg>
             </div>
             {/* */}
-            <ul className="flex flex-col items-center justify-between min-h-[250px] text-4xl">
-              <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
-                <a href="#about" className="lg:text-1xl text-green-400 hover:text-cyan-600">About</a>
+            <ul className="flex min-h-[250px] flex-col items-center justify-between text-4xl">
+              <li
+                className="my-8 border-b border-gray-400 uppercase"
+                onClick={() => setIsNavOpen(false)}
+              >
+                <a
+                  href="#about"
+                  className="lg:text-1xl text-green-400 hover:text-cyan-600"
+                >
+                  About
+                </a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
-                <a href="#course" className="lg:text-1xl text-green-400 hover:text-cyan-600">Courses</a>
+              <li
+                className="my-8 border-b border-gray-400 uppercase"
+                onClick={() => setIsNavOpen(false)}
+              >
+                <a
+                  href="#course"
+                  className="lg:text-1xl text-green-400 hover:text-cyan-600"
+                >
+                  Courses
+                </a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase" onClick={() => setIsNavOpen(false)}>
-                <a href="#contact" className="lg:text-1xl text-green-400 hover:text-cyan-600">Contact</a>
+              <li
+                className="my-8 border-b border-gray-400 uppercase"
+                onClick={() => setIsNavOpen(false)}
+              >
+                <a
+                  href="#contact"
+                  className="lg:text-1xl text-green-400 hover:text-cyan-600"
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
@@ -61,18 +85,33 @@ export default function Header() {
         {/* SideNav ends */}
 
         {/* Navbar starts */}
-        <ul className="text-lg font-light hidden space-x-8 px-4 lg:flex items-center justify-between">
-          <li className="border border-transparent hover:rounded-full hover:p-0.5 hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#about" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">About</a>
+        <ul className="hidden items-center justify-between space-x-8 px-4 text-lg font-light lg:flex">
+          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400 hover:p-0.5">
+            <a
+              href="#about"
+              className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
+            >
+              About
+            </a>
           </li>
-          <li className="border border-transparent hover:rounded-full hover:p-0.5 hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#course" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Courses</a>
+          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400/70 hover:p-0.5">
+            <a
+              href="#course"
+              className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
+            >
+              Courses
+            </a>
           </li>
-          <li className="border border-transparent hover:rounded-full hover:p-0.5 hover:border-green-600 hover:bg-green-400 transition-all duration-75">
-            <a href="#contact" className="text-green-400 hover:text-white hover:uppercase hover:font-medium p-4">Contact</a>
+          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400/70 hover:p-0.5">
+            <a
+              href="#contact"
+              className="p-4 text-green-400 hover:font-black hover:uppercase hover:text-slate-800"
+            >
+              Contact
+            </a>
           </li>
           <li className="">
-            <DarkModeToggle/>
+            <DarkModeToggle />
           </li>
         </ul>
         {/* Navbar starts */}
