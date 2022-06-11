@@ -83,19 +83,23 @@ export default function ContactForm(props) {
     }
   }, [txtmsg]);
 
+  const labelStyle = "text-sm leading-7 font-thin dark:text-green-400/95";
+
   const inputStyle =
-    "mt-1 mb-4 block w-full rounded-md border-green-300 shadow-sm focus:border-cyan-300 focus:ring focus:ring-cyan-200 focus:ring-opacity-50";
+    "mt-1 mb-4 block w-full rounded-lg borderfocus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50 dark:bg-gray-700 outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out";
 
   return (
-    <div className="relative z-40 mt-10 flex w-full flex-col rounded-lg bg-green-100/95 p-4 shadow-md dark:bg-slate-900/95 dark:text-green-400/95 md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3">
+    <div className="relative z-40 mt-10 flex w-full flex-col rounded-lg bg-green-100 p-4 shadow-md dark:bg-slate-900/95 dark:text-green-500/95 md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3">
       <form className="px-8 py-4" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="block text-center text-2xl font-bold">
-          {" "}
-          Get in Touch with Us{" "}
+        <h1 className="title-font mb-1 text-center text-2xl font-black uppercase leading-loose">
+          Get in Touch with Us
         </h1>
         <br />
-        <label>Full Name</label>
+        <label htmlFor="name" className={labelStyle}>
+          Full Name
+        </label>
         <input
+          id="name"
           type="text"
           className={inputStyle} //placeholder="Full name"
           {...register("fullName", {
@@ -119,7 +123,9 @@ export default function ContactForm(props) {
         ) : (
           <></>
         )}
-        <label>Mobile Number</label>
+        <label htmlFor="mobile" className={labelStyle}>
+          Mobile Number
+        </label>
         <input
           type="tel"
           className={inputStyle} //placeholder="Mobile number"
@@ -153,7 +159,9 @@ export default function ContactForm(props) {
         ) : (
           <></>
         )}
-        <label className="py-4">Email Address</label>
+        <label htmlFor="email" className={labelStyle}>
+          Email Address
+        </label>
         <input
           type="text"
           className={inputStyle} //placeholder="Email"
@@ -170,7 +178,7 @@ export default function ContactForm(props) {
           <></>
         )}
         <button
-          className="mt-4 mb-4 transform justify-items-center rounded-xl border-2 border-green-500 bg-transparent px-1 py-1 text-sm uppercase transition-colors duration-200 hover:bg-green-500 hover:text-gray-100 focus:border-4 focus:border-green-300"
+          className="mt-4 mb-4 w-full rounded-full border-2 border-green-500 bg-transparent px-1 py-1 text-sm uppercase transition-colors duration-200 hover:bg-green-500 hover:text-gray-100 focus:border-4 focus:border-green-300"
           type="submit"
         >
           Submit

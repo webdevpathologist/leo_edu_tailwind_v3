@@ -27,7 +27,7 @@ export default function Card(props) {
   // dark:text-green-300/95
 
   return (
-    <div className="transform overflow-hidden rounded-lg shadow-md shadow-emerald-400/50 transition duration-300 bg-green-50 hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-400 hover:ring-4 hover:ring-emerald-300 dark:bg-slate-700/95 dark:text-green-400/95 dark:shadow-sm">
+    <div className="transform overflow-hidden rounded-lg bg-green-50 shadow-md shadow-emerald-400/50 transition duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-400 hover:ring-4 hover:ring-emerald-300 dark:bg-slate-700/95 dark:text-green-400/95 dark:shadow-sm">
       {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
       <div className="px-6 py-6">
         <div className="mb-2 flex justify-center text-2xl font-bold">
@@ -43,7 +43,7 @@ export default function Card(props) {
             return (
               <span
                 key={id}
-                className="mr-2 mb-2 inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 bg-emerald-100"
+                className="mr-2 mb-2 inline-block rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-gray-700"
               >
                 {ele}
               </span>

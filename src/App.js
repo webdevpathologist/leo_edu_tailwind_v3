@@ -6,6 +6,8 @@ import ContactUs from "./sections/contact";
 import "leaflet/dist/leaflet.css";
 
 function App() {
+  if (process.env.NODE_ENV !== "development") console.log = () => {};
+  console.log("txtmsg");
   return (
     <div className="bg-slate-200 font-prompt dark:bg-slate-900/95">
       <Header />
