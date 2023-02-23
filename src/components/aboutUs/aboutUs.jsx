@@ -1,14 +1,27 @@
 export default function AboutUs() {
   return (
-    <div className="text-1xl flex items-center justify-between px-2 text-slate-300 dark:text-green-400">
-      Founded in 2020, The Leo's Educational Academy is one of the emerging
-      institutes in Tamilnadu where we thrive in providing Cognitive education
-      for our children. We have adequate curriculum inorder to stimulate, enrich
-      the computing and imaginary skills of our children which are alarmingly
-      missing in traditional educational system.We are achieving this by
-      entering into an affiliation with Brain checker & company whom develops,
-      follows a syllabus through . we focuses on the career guidance for our
-      children right from their young age.
+    <div className="text-1xl flex items-center justify-between px-1 text-slate-300 dark:text-green-400">
+      <p>
+        Welcome to The Leo's Educational Academy, an innovative educational
+        academy committed to providing a dynamic learning environment that
+        encourages students to explore and grow. It is a brain child of Mrs.
+        Aarthy who is driven by an ambitious vision of developing a curiosity
+        for learning in students, encouraging them to discover their interests
+        and fostering a love of learning.
+        <br />
+        <br />
+        To achieve it in an optimal way, we have established associations with
+        reputed organizations specializing in abacus, calligraphy, brain gym,
+        handwriting, and other interactive curricula that enhance our students'
+        learning experiences.
+        <br />
+        <br />
+        We are committed to creating a supportive community that promotes
+        academic excellence and personal growth. Join us on this journey of
+        discovery and growth!
+        <br />
+      </p>
+      
     </div>
   );
 }

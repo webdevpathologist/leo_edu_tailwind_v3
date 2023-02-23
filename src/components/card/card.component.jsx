@@ -37,7 +37,7 @@ export default function Card(props) {
           {card_data.description}
         </p>
       </div>
-      <div className="flex justify-center px-4 pt-2 pb-2">
+      {/* <div className="flex justify-center px-4 pt-2 pb-2">
         {card_data.tags ? (
           card_data.tags.map((ele, id) => {
             return (
@@ -52,7 +52,7 @@ export default function Card(props) {
         ) : (
           <></>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
