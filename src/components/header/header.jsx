@@ -86,7 +86,7 @@ export default function Header() {
 
         {/* Navbar starts */}
         <ul className="hidden items-center justify-between space-x-8 px-4 text-lg font-light lg:flex">
-          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400  dark:hover:bg-green-400/70 hover:p-0.5">
+          <li className="transition-all duration-75 hover:rounded-full hover:shadow hover:shadow-green-600 hover:bg-green-400  dark:hover:bg-green-400/70 hover:p-0.5">
             <a
               href="#about"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
@@ -94,7 +94,7 @@ export default function Header() {
               About
             </a>
           </li>
-          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
+          <li className="transition-all duration-75 hover:rounded-full hover:shadow hover:shadow-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
             <a
               href="#course"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
@@ -102,7 +102,7 @@ export default function Header() {
               Courses
             </a>
           </li>
-          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
+          <li className="transition-all duration-75 hover:rounded-full hover:shadow hover:shadow-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
             <a
               href="#contact"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
