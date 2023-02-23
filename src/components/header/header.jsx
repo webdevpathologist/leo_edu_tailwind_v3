@@ -6,7 +6,7 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between border-b border-gray-300 bg-white bg-opacity-30 bg-gradient-to-br from-green-400 to-cyan-600 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter">
+    <header className="sticky top-0 z-40 flex items-center justify-between border-b border-gray-300 bg-white bg-opacity-40 bg-gradient-to-br from-green-400 to-cyan-600 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter">
       {/* Company Name */}
       <h1 className="flex font-bold uppercase sm:justify-center sm:text-4xl lg:text-5xl">
         <GiLion className="mx-4 text-emerald-400" />
@@ -86,7 +86,7 @@ export default function Header() {
 
         {/* Navbar starts */}
         <ul className="hidden items-center justify-between space-x-8 px-4 text-lg font-light lg:flex">
-          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400 hover:p-0.5">
+          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400  dark:hover:bg-green-400/70 hover:p-0.5">
             <a
               href="#about"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
@@ -94,7 +94,7 @@ export default function Header() {
               About
             </a>
           </li>
-          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400/70 hover:p-0.5">
+          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
             <a
               href="#course"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
@@ -102,10 +102,10 @@ export default function Header() {
               Courses
             </a>
           </li>
-          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400/70 hover:p-0.5">
+          <li className="border border-transparent transition-all duration-75 hover:rounded-full hover:border-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
             <a
               href="#contact"
-              className="p-4 text-green-400 hover:font-black hover:uppercase hover:text-slate-800"
+              className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
             >
               Contact
             </a>
