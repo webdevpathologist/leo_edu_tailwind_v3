@@ -6,7 +6,7 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <header className="sticky top-0 z-40 flex items-center justify-between border-b border-gray-300 bg-white bg-opacity-40 bg-gradient-to-br from-green-400 to-cyan-600 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter">
+    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-300 bg-white bg-opacity-40 bg-gradient-to-br from-green-400 to-cyan-600 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter">
       {/* Company Name */}
       <h1 className="flex font-bold uppercase sm:justify-center sm:text-4xl lg:text-5xl">
         <GiLion className="mx-4 text-emerald-400" />
