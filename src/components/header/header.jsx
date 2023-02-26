@@ -3,7 +3,8 @@ import { GiLion } from "react-icons/gi";
 import DarkModeToggle from "../darkMode/darkModeToggle";
 
 export default function Header() {
-  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
 
   return (
     <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-300 bg-white bg-opacity-40 bg-gradient-to-br from-green-400 to-cyan-600 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter">
@@ -86,7 +87,9 @@ export default function Header() {
 
         {/* Navbar starts */}
         <ul className="hidden items-center justify-between space-x-8 px-4 text-lg font-light lg:flex">
-          <li className="transition-all duration-75 hover:rounded-full hover:shadow hover:shadow-green-600 hover:bg-green-400  dark:hover:bg-green-400/70 hover:p-0.5">
+          <li
+            className="transition-all duration-75 hover:rounded-full hover:bg-green-400 hover:p-0.5 hover:shadow  hover:shadow-green-600 dark:hover:bg-green-400/70"
+          >
             <a
               href="#about"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
@@ -94,7 +97,7 @@ export default function Header() {
               About
             </a>
           </li>
-          <li className="transition-all duration-75 hover:rounded-full hover:shadow hover:shadow-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
+          <li className="transition-all duration-75 hover:rounded-full hover:bg-green-400 hover:p-0.5 hover:shadow hover:shadow-green-600 dark:hover:bg-green-400/70">
             <a
               href="#course"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"
@@ -102,7 +105,7 @@ export default function Header() {
               Courses
             </a>
           </li>
-          <li className="transition-all duration-75 hover:rounded-full hover:shadow hover:shadow-green-600 hover:bg-green-400 dark:hover:bg-green-400/70 hover:p-0.5">
+          <li className="transition-all duration-75 hover:rounded-full hover:bg-green-400 hover:p-0.5 hover:shadow hover:shadow-green-600 dark:hover:bg-green-400/70">
             <a
               href="#contact"
               className="p-4 text-green-400 hover:font-medium hover:uppercase hover:text-white"

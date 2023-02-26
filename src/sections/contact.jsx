@@ -16,7 +16,7 @@ export default function ContactUs() {
     //     </div>
     //   </div>
     // </section>
-    <section id="contact" className="p-1">
+    <section id="contact" className="p-0.5 scroll-m-40">
       <div className="body-font relative text-gray-600">
         <div className="absolute inset-0">
           <iframe
