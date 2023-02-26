@@ -1,7 +1,7 @@
 import Header from "./components/header/header";
 import About from "./sections/about";
 import Courses from "./sections/courses";
-import ContactUs from "./sections/contact";
+import ContactUs from "./sections/contactOverlay";
 
 import "leaflet/dist/leaflet.css";
 
