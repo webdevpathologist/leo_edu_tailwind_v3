@@ -127,6 +127,7 @@ export default function ContactForm(props) {
           Mobile Number
         </label>
         <input
+          id="mobile"
           type="tel"
           className={inputStyle} //placeholder="Mobile number"
           {...register("mobileNumber", {
@@ -163,6 +164,7 @@ export default function ContactForm(props) {
           Email Address
         </label>
         <input
+        id="email"
           type="text"
           className={inputStyle} //placeholder="Email"
           {...register("email", {
