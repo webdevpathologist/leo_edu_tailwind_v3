@@ -1,6 +1,9 @@
 export default function AboutUs() {
+  const page_para_text = "text-gray-700"
+  const page_para_text_dark = "text-green-400"
+  
   return (
-    <div className="text-1xl flex items-center justify-between px-1 text-gray-700 dark:text-green-400">
+    <div className={`text-1xl flex items-center justify-between px-1 ${page_para_text} dark:${page_para_text_dark}`}>
       <p>
         Welcome to The Leo's Educational Academy, an innovative educational
         academy committed to providing a dynamic learning environment that
@@ -12,7 +15,7 @@ export default function AboutUs() {
         <br />
         To achieve it in an optimal way, we have established associations with
         reputed organizations specializing in abacus, calligraphy, brain gym,
-        handwriting, and other interactive curricula that enhance our students'
+        handwriting, and other interactive curricula that enhance our student's
         learning experiences.
         <br />
         <br />
@@ -21,7 +24,6 @@ export default function AboutUs() {
         discovery and growth!
         <br />
       </p>
-      
     </div>
   );
 }
