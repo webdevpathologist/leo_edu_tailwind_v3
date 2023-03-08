@@ -187,7 +187,7 @@ export default function ContactForm(props) {
           <></>
         )}
         <button
-          className="mt-4 mb-4 w-full rounded-full border-2 border-green-500 bg-transparent px-1 py-1 text-sm uppercase transition-colors duration-200 hover:bg-green-500 hover:text-gray-100 focus:border-4 focus:border-green-300"
+          className="mt-4 mb-4 w-full rounded-full border-2 border-indigo-500 dark:border-green-500 bg-transparent px-1 py-1 text-sm uppercase transition-colors duration-200 hover:bg-indigo-500 hover:text-gray-100 dark:hover:bg-green-500 dark:hover:text-gray-100 focus:border-4 focus:border-green-300"
           type="submit"
         >
           Submit
