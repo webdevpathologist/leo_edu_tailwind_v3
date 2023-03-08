@@ -12,7 +12,7 @@ export default function Header() {
         <DarkModeToggle />
       </div>
       <h1 className="flex font-bold uppercase sm:justify-center sm:text-3xl md:text-4xl lg:text-5xl">
-        <GiLion className="invisible mx-4 text-indigo-800 dark:text-emerald-500 md:visible" />
+        <GiLion className="hidden mx-4 text-indigo-800 dark:text-emerald-500 md:inline-block" />
         <br />
         <a href="/"> The Leo's Educational Academy</a>
       </h1>
