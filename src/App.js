@@ -9,7 +9,7 @@ function App() {
   if (process.env.NODE_ENV !== "development") console.log = () => {};
   console.log("txtmsg");
   return (
-    <div className="bg-indigo-50 font-prompt dark:bg-slate-900/95">
+    <div className="bg-indigo-50 font-prompt dark:bg-slate-900/80">
       <Header />
       <main className="md:px-25 md:mt-px md:py-px p-auto">
         <About />

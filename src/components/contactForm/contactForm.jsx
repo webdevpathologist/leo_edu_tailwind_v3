@@ -84,21 +84,21 @@ export default function ContactForm(props) {
   }, [txtmsg]);
 
 
-  const form_head_text = "text-gray-600"
+  const form_head_text = "text-slate-800"
   const form_head_text_dark = "text-green-500/95"
 
-  const form_label_text_dark = "text-green-400/95"
+  const form_label_text_dark = "text-indigo-400/95"
   const form_input_dark = "bg-gray-700"
 
   const labelStyle = `text-sm leading-7 font-thin dark:${form_label_text_dark}`;
 
   const inputStyle =
-    `mt-1 mb-4 block w-full rounded-lg borderfocus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50 dark:${form_input_dark} outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`;
+    `mt-1 mb-4 block w-full rounded-lg dark:borderfocus:border-green-300 dark:focus:ring dark:focus:ring-green-200 focus:ring-opacity-50 dark:${form_input_dark} outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`;
 
   return (
-    <div className={`relative z-30 mt-10 flex w-full flex-col rounded-lg bg-green-100 p-4 shadow-md dark:bg-slate-900/95 ${form_head_text} dark:${form_head_text_dark} md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3`}>
+    <div className={`relative z-20 mt-10 flex w-full flex-col rounded-lg bg-indigo-200 p-4 shadow-md dark:bg-slate-800/95 ${form_head_text} dark:${form_head_text_dark} md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3`}>
       <form className="px-8 py-4" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="title-font mb-1 text-center text-2xl font-black uppercase leading-loose">
+        <h1 className={`${form_head_text} dark:${form_head_text_dark} title-font mb-1 text-center text-2xl font-black uppercase leading-loose`}>
           Get in Touch with Us
         </h1>
         <br />
