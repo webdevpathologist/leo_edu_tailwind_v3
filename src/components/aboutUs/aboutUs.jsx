@@ -1,5 +1,5 @@
 export default function AboutUs() {
-  const page_para_text = "text-gray-700"
+  const page_para_text = "text-indigo-800/95"
   const page_para_text_dark = "text-green-400"
   
   return (
