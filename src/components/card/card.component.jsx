@@ -37,22 +37,24 @@ export default function Card(props) {
           {card_data.description}
         </p>
       </div>
-      <div className="flex justify-center px-4 pt-2 pb-2">
-        {card_data.tags ? (
-          card_data.tags.map((ele, id) => {
-            return (
-              <span
-                key={id}
-                className="mr-2 mb-2 inline-block rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-gray-700"
-              >
-                {ele}
-              </span>
-            );
-          })
-        ) : (
-          <></>
-        )}
-      </div>
+      {card_data.tags ? (
+        card_data.tags.map((ele, id) => {
+          return (
+            <div className="flex justify-center px-4 pt-2 pb-2">
+              <div className="flex justify-center px-4 pt-2 pb-2">
+                <span
+                  key={id}
+                  className="mr-2 mb-2 inline-block rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  {ele}
+                </span>
+              </div>
+            </div>
+          );
+        })
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function AboutUs() {
         <br />
         To achieve it in an optimal way, we have established associations with
         reputed organizations specializing in abacus, calligraphy, brain gym,
-        handwriting, and other interactive curricula that enhance our students'
+        handwriting, and other interactive curricula that enhance our student's
         learning experiences.
         <br />
         <br />
@@ -21,7 +21,6 @@ export default function AboutUs() {
         discovery and growth!
         <br />
       </p>
-      
     </div>
   );
 }
