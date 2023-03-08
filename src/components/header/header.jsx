@@ -6,7 +6,7 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-300 bg-white dark:bg-slate-500 bg-opacity-40 bg-gradient-to-br from-indigo-800 to-purple-800 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter dark:bg-gradient-to-br dark:from-green-600 dark:to-cyan-300">
+    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-300 bg-white dark:bg-slate-500 bg-opacity-40 bg-gradient-to-br from-indigo-800 to-purple-800/80 bg-clip-text py-7 px-2 text-transparent backdrop-blur-xl backdrop-filter dark:bg-gradient-to-br dark:from-green-600 dark:to-cyan-300">
       {/* Company Name */}
       <div className="flex-start md:hidden">
         <DarkModeToggle />

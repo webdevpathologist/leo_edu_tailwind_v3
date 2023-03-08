@@ -1,9 +1,9 @@
 export default function AboutUs() {
-  const page_para_text = "text-indigo-800/95"
+  const page_para_text = "text-indigo-800"
   const page_para_text_dark = "text-green-400"
   
   return (
-    <div className={`text-1xl flex items-center justify-between px-1 ${page_para_text} dark:${page_para_text_dark}`}>
+    <div className={`text-1xl flex items-center justify-between px-1 ${page_para_text} dark:${page_para_text_dark} shadow-sm`}>
       <p>
         Welcome to The Leo's Educational Academy, an innovative educational
         academy committed to providing a dynamic learning environment that

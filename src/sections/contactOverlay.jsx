@@ -2,7 +2,7 @@ import ContactForm from "../components/contactForm/contactForm";
 
 export default function ContactUs() {
   return (
-    <section id="contact" className="p-0.5 scroll-m-40">
+    <section id="contact" className="p-0.5 scroll-m-40 bg-indigo-100 dark:bg-slate-800/80">
       <div className="body-font relative">
         <div className="absolute inset-0">
           <iframe
