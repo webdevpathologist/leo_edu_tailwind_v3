@@ -35,7 +35,7 @@ export default function Header() {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 fill-indigo-400 text-gray-600 dark:fill-green-200"
+                className="h-8 w-8 fill-indigo-400 text-gray-600 dark:text-green-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -48,36 +48,36 @@ export default function Header() {
               </svg>
             </div>
             {/* */}
-            <ul className="flex min-h-[250px] flex-col items-center justify-between text-4xl">
+            <ul className="flex h-full w-full flex-col items-center justify-center text-4xl bg-indigo-50 dark:bg-slate-900/90">
               <li
-                className="my-8 border-b border-gray-400 uppercase"
+                className="my-8 border-b border-gray-400 dark:border-emerald-400 uppercase"
                 onClick={() => setIsNavOpen(false)}
               >
                 <a
                   href="#about"
-                  className="lg:text-1xl text-indigo-500 hover:text-cyan-600"
+                  className="lg:text-1xl text-indigo-500 hover:text-cyan-600 dark:text-emerald-400"
                 >
                   About
                 </a>
               </li>
               <li
-                className="my-8 border-b border-gray-400 uppercase"
+                className="my-8 border-b border-gray-400 dark:border-emerald-400 uppercase"
                 onClick={() => setIsNavOpen(false)}
               >
                 <a
                   href="#course"
-                  className="lg:text-1xl text-indigo-500 hover:text-cyan-600"
+                  className="lg:text-1xl text-indigo-500 hover:text-cyan-600 dark:text-emerald-400"
                 >
                   Courses
                 </a>
               </li>
               <li
-                className="my-8 border-b border-gray-400 uppercase"
+                className="my-8 border-b border-gray-400 dark:border-emerald-400 uppercase"
                 onClick={() => setIsNavOpen(false)}
               >
                 <a
                   href="#contact"
-                  className="lg:text-1xl text-indigo-500 hover:text-cyan-600"
+                  className="lg:text-1xl text-indigo-500 hover:text-cyan-600 dark:text-emerald-400"
                 >
                   Contact
                 </a>

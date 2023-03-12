@@ -3,8 +3,8 @@ export default function AboutUs() {
   const page_para_text_dark = "text-green-400"
   
   return (
-    <div className={`text-1xl flex items-center justify-between px-1 ${page_para_text} dark:${page_para_text_dark} shadow-sm`}>
-      <p>
+    <div className={`text-1xl flex items-center justify-between px-1 ${page_para_text} dark:${page_para_text_dark} lg:shadow-sm`}>
+      <p className="leading-relaxed">
         Welcome to The Leo's Educational Academy, an innovative educational
         academy committed to providing a dynamic learning environment that
         encourages students to explore and grow. It is a brain child of Mrs.
