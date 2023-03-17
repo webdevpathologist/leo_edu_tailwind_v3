@@ -40,7 +40,7 @@ export default function ContactForm(props) {
     // console.log(txtmsg);
     if (txtmsg && txtmsg !== "") {
       
-      const url1='/api/sendToTelegram';
+      const url1='/.netlify/functions/sendToTelegram';
       const sendingMsg =Axios.post(url1,{text: txtmsg}).then(res=>{console.log(res.data);})
 
       toast.promise(
