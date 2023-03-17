@@ -183,7 +183,7 @@ export default function ContactForm(props) {
           Submit
         </button>
       </form>
-      <Toaster position="bottom-right" className="z-40"/>
+      <Toaster position="top-right" className="z-40"/>
     </div>
   );
 }
