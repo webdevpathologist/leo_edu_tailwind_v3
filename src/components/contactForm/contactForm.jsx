@@ -42,30 +42,6 @@ export default function ContactForm(props) {
       
       const url1='/api/sendToTelegram';
       const sendingMsg =Axios.post(url1,{text: txtmsg}).then(res=>{console.log(res.data);})
-      
-      // const url =
-      //   "https://api.telegram.org/bot" +
-      //   process.env.REACT_APP_BOT_TOKEN +
-      //   "/sendMessage";
-      // // console.log(url);
-      // const sendingMsg = Axios.post(url, {
-      //   chat_id: process.env.REACT_APP_CHAT_ID,
-      //   text: txtmsg,
-      // })
-      //   .then((response) => {
-      //     // console.log(response.data);
-      //     if (response.data.ok === true) {
-      //       toast.success("We will call you soon..👍👍", {
-      //         options: {
-      //           duration: 8000,
-      //           icon: "",
-      //         },
-      //       });
-      //     }
-      //   })
-      //   .catch((error) => {
-      //     // console.log(error);
-      //   });
 
       toast.promise(
         sendingMsg,
