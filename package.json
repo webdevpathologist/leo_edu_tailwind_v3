@@ -14,7 +14,7 @@
     "express-rate-limit": "5.5.0",
     "http-proxy-middleware": "^2.0.6",
     "leaflet": "1.5.1",
-    "netlify-lambda": "^2.0.16",
+    "netlify-lambda": "2.0.16",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "7.22.5",
@@ -27,7 +27,7 @@
   "scripts": {
     "api:serve": "netlify-lambda serve .netlify/functions",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "netlify-lambda build .netlify/functions && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

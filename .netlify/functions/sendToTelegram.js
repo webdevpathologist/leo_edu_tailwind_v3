@@ -5,10 +5,9 @@ require("dotenv").config();
 exports.handler=async(event,context)=>{
 
   try {
-    const text = String(event.body).replace(/'/g, '\'').replace(/\\'/g,"'")
     const bodyParsed = JSON.parse((event.body))
 
-    console.log(bodyParsed.text);
+    // console.log(bodyParsed.text);
     // return{
     //     statusCode:200,
     //     body: JSON.stringify({ message: "Hello World" }),
@@ -18,7 +17,6 @@ exports.handler=async(event,context)=>{
     process.env.REACT_APP_BOT_TOKEN +
     "/sendMessage";
 
-    console.log(`${url}?`);
     const send2Telegram = await Axios.post(url, {
       chat_id: process.env.REACT_APP_CHAT_ID,
       text: bodyParsed.text,

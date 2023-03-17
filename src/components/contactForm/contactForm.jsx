@@ -40,8 +40,18 @@ export default function ContactForm(props) {
     // console.log(txtmsg);
     if (txtmsg && txtmsg !== "") {
       
-      const url1='/.netlify/functions/sendToTelegram';
-      const sendingMsg =Axios.post(url1,{text: txtmsg}).then(res=>{console.log(res.data);})
+      const url='/.netlify/functions/sendToTelegram';
+      const sendingMsg = Axios.post(url,{text: txtmsg}).then(res=>{
+        console.log(res.data.data.ok);
+        if (res.data.data.ok === true) {
+          toast.success("We will call you soon..👍👍", {
+            options: {
+              duration: 8000,
+              icon: "",
+            },
+          });
+        }
+      });
 
       toast.promise(
         sendingMsg,
