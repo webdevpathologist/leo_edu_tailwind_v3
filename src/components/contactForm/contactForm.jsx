@@ -42,7 +42,7 @@ export default function ContactForm(props) {
       
       const url='/.netlify/functions/sendToTelegram';
       const sendingMsg = Axios.post(url,{text: txtmsg}).then(res=>{
-        console.log(res.data.data.ok);
+        // console.log(res.data.data.ok);
         if (res.data.data.ok === true) {
           toast.success("We will call you soon..👍👍", {
             options: {
@@ -86,6 +86,7 @@ export default function ContactForm(props) {
     `mt-1 mb-4 block w-full rounded-lg dark:borderfocus:border-green-300 dark:focus:ring dark:focus:ring-green-200 focus:ring-opacity-50 dark:${form_input_dark} outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`;
 
   return (
+    <>
     <div className={`relative z-20 mt-10 flex w-full flex-col rounded-lg bg-indigo-200 p-4 shadow-md dark:bg-slate-800/95 ${form_head_text} dark:${form_head_text_dark} md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3`}>
       <form className="px-8 py-4" onSubmit={handleSubmit(onSubmit)}>
         <h1 className={`${form_head_text} dark:${form_head_text_dark} title-font mb-1 text-center text-2xl font-black uppercase leading-loose`}>
@@ -183,7 +184,8 @@ export default function ContactForm(props) {
           Submit
         </button>
       </form>
-      <Toaster position="top-right" className="z-40"/>
     </div>
+    <Toaster position="top-right" className="z-40"/>
+    </>
   );
 }
