@@ -13,14 +13,13 @@ export default function AboutUs() {
         and fostering a love of learning.
         <br />
         <br />
-        To achieve it in an optimal way, we have established associations with
-        reputed organizations specializing in abacus, calligraphy, brain gym,
+        To achieve it in an optimal way, we have established associations with <a target={"_blank"} rel='noreferrer' class="underline decoration-2 box-decoration-slice decoration-indigo-600 dark:decoration-zinc-200/90" href="https://brainybobs.in/">reputed organizations</a> specializing in abacus, calligraphy, brain gym,
         handwriting, and other interactive curricula that enhance our student's
         learning experiences.
         <br />
         <br />
         We are committed to creating a supportive community that promotes
-        academic excellence and personal growth. Join us on this journey of
+        academic excellence and personal growth. Send us your contact details in the form below & Join us on this journey of
         discovery and growth!
         <br />
       </p>

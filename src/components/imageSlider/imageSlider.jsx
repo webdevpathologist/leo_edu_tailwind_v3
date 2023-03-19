@@ -29,7 +29,7 @@ function ImageSlider() {
     const photoScrollInterval = setInterval(() => {
       // console.log(`${currSlide}`);
       nextSlide();
-    }, 4000);
+    }, 7000);
 
     return () => clearInterval(photoScrollInterval);
   }, [nextSlide]);
