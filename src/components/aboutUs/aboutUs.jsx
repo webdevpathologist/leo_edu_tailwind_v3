@@ -13,7 +13,7 @@ export default function AboutUs() {
         and fostering a love of learning.
         <br />
         <br />
-        To achieve it in an optimal way, we have established associations with <a target={"_blank"} rel='noreferrer' class="underline decoration-2 box-decoration-slice decoration-indigo-600 dark:decoration-zinc-200/90 hover:animate-pulse" href="https://brainybobs.in/">reputed organizations</a> specializing in abacus, calligraphy, brain gym,
+        To achieve it in an optimal way, we have established associations with <a target={"_blank"} rel='noreferrer' class="underline decoration-2 box-decoration-slice decoration-green-600 font-bold dark:decoration-zinc-200/90 hover:animate-pulse" href="https://brainybobs.in/">reputed organizations</a> specializing in abacus, calligraphy, brain gym,
         handwriting, and other interactive curricula that enhance our student's
         learning experiences.
         <br />
