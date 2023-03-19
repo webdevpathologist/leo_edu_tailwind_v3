@@ -1,58 +1,50 @@
-import React, { useState } from 'react';
-import { BsArrowLeftCircle,BsArrowRightCircle } from 'react-icons/bs';
+import React, { useEffect, useState } from 'react';
+import { BsFillCaretRightFill,BsFillCaretLeftFill } from 'react-icons/bs';
+// import {TiMediaRecordOutline} from 'react-icons/ti'
 
 function ImageSlider() {
-  const slides = [
-    {
-      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
-    },
+  const slides = [1,2,3,4].map((el)=>({url:`../../images/carousel-${el}.jpeg`}))
+   
 
-    {
-      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currSlide, setCurrSlide] = useState(0);
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+    setCurrSlide((currSlide) => (currSlide === 0 ? slides.length - 1 : currSlide - 1))
   };
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+    setCurrSlide((currSlide) => (currSlide === slides.length - 1 ? 0 : currSlide + 1))
   };
 
   const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
+    setCurrSlide(slideIndex);
   };
+
+  useEffect(()=>{
+    const photoScrollInterval = setInterval(() => {
+    // console.log(`${currSlide}`);
+      nextSlide();
+    }, 4000);
+
+    return ()=> clearInterval(photoScrollInterval);
+
+  },[])
 
   return (
     <div className='h-full w-full relative group'>
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='w-full h-full rounded bg-center bg-cover duration-500'
+        style={{ backgroundImage: `url(${slides[currSlide].url})`}}
+        className='w-full h-full rounded bg-top bg-cover duration-1000 transition-all ease-out delay-1000'
       ></div>
       {/* Left Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-        <BsArrowLeftCircle onClick={prevSlide} size={15} />
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-1xl rounded-lg p-1 bg-black/20 text-white cursor-pointer'>
+        <BsFillCaretLeftFill onClick={prevSlide} size={13}/>
       </div>
       {/* Right Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-        <BsArrowRightCircle onClick={nextSlide} size={15} />
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-1xl rounded-lg p-1 bg-black/20 text-white cursor-pointer'>
+        <BsFillCaretRightFill onClick={nextSlide} size={13} />
       </div>
+      {/* Slide Dot, Click to go to the slide */}
       <div className='flex top-4 justify-center py-2'>
         {slides.map((slide, slideIndex) => (
           <div
@@ -60,7 +52,7 @@ function ImageSlider() {
             onClick={() => goToSlide(slideIndex)}
             className='text-2xl cursor-pointer'
           >
-        
+            {/* <TiMediaRecordOutline onClick={goToSlide}/> */}
           </div>
         ))}
       </div>
