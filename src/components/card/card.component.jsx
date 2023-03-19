@@ -76,12 +76,12 @@ export default function Card(props) {
           <p className={`sm:text-sm lg:text-base dark:${card_para_text_dark_hover}`}>
             {card_data.description}
           </p>
-          <div className='px-0.5 py-3 flex flex-row items-start '>
+          <div className='px-0.5 pt-4 flex flex-row items-start justify-between'>
           {
           card_data.headCount 
           ? 
           <p className={`sm:text-xs lg:text-sm font-thin dark:${card_para_text_dark_hover}`}>
-            Children Enrolled: {card_data.headCount }, 
+            Children Enrolled: {card_data.headCount }
           </p>
           : 
           <></> }
