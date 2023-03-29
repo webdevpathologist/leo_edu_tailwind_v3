@@ -36,12 +36,11 @@ export default function Card(props) {
   const card_bg_dark = "bg-slate-700/95"
   const card_bg_dark_hover = "bg-slate-700/50"
   
-  const card_head_text_dark = "text-emerald-300/75"
   const card_head_text_dark_hover = "text-green-400/95"
   const card_para_text_dark_hover = "text-green-300/95"
 
   return (
-    <div className={`py-2 transform transition duration-300 overflow-hidden rounded-lg ${card_bg} ${card_head_text} shadow-md shadow-indigo-300 dark:shadow-emerald-400/50  hover:-translate-y-2 hover:${card_bg_hover} hover:shadow-lg dark:hover:shadow-emerald-400 dark:hover:ring-4 dark:hover:ring-emerald-300 hover:shadow-indigo-400 hover:ring-4 hover:ring-indigo-500 dark:${card_bg_dark} dark:${card_head_text_dark} dark:shadow-sm dark:hover:${card_bg_dark_hover} dark:hover:${card_head_text_dark_hover} ${card_para_text}`}>
+    <div className={`py-2 transform transition duration-300 overflow-hidden rounded-lg ${card_bg} ${card_head_text} shadow-md shadow-indigo-300 dark:shadow-emerald-400/50  hover:-translate-y-2 hover:${card_bg_hover} hover:shadow-lg dark:hover:shadow-emerald-400 dark:hover:ring-4 dark:hover:ring-emerald-300 hover:shadow-indigo-400 hover:ring-4 hover:ring-indigo-500 dark:${card_bg_dark} dark:shadow-sm dark:hover:${card_bg_dark_hover} dark:hover:${card_head_text_dark_hover} ${card_para_text}`}>
       {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
       <div className="py-3 px-3 relative flex flex-row items-end justify-items-end h-full transform transition-transform duration-100 group-hover:-translate-x-2 group-hover:-translate-y-2 group">
         <div className="visible group-hover:hidden ">

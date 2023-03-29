@@ -1,6 +1,6 @@
 export default function AboutUs() {
   const page_para_text = "text-gray-700" //"text-indigo-800"
-  const page_para_text_dark = "text-green-400"
+  const page_para_text_dark ="text-green-300/95"
   
   return (
     <div className={`text-1xl flex items-center justify-between px-1 ${page_para_text} dark:${page_para_text_dark} lg:shadow-sm`}>
