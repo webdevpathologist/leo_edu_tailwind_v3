@@ -2,6 +2,7 @@ import Header from "./components/header/header";
 import About from "./sections/about";
 import Courses from "./sections/courses";
 import ContactUs from "./sections/contactOverlay";
+import Footer from './components/footer/footer'
 
 import "leaflet/dist/leaflet.css";
 
@@ -18,6 +19,7 @@ function App() {
         {/* <GoogleMap/> */}
         {/* <OpenStreetMap/> */}
       </main>
+      <Footer/>
     </div>
   );
 }
