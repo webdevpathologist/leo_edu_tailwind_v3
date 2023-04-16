@@ -40,7 +40,7 @@ export default function Card(props) {
   const card_para_text_dark_hover = "text-green-300/95"
 
   return (
-    <div className={`py-2 transform transition duration-300 overflow-hidden rounded-lg ${card_bg} ${card_head_text} shadow-md shadow-indigo-300 dark:shadow-emerald-400/50  hover:-translate-y-2 hover:${card_bg_hover} hover:shadow-lg dark:hover:shadow-emerald-400 dark:hover:ring-4 dark:hover:ring-emerald-300 hover:shadow-indigo-400 hover:ring-4 hover:ring-indigo-500 dark:${card_bg_dark} dark:shadow-sm dark:hover:${card_bg_dark_hover} dark:hover:${card_head_text_dark_hover} ${card_para_text}`}>
+    <div className={`py-2 transform transition duration-300 overflow-hidden rounded-lg ${card_bg} ${card_head_text} shadow-md shadow-indigo-300 dark:shadow-emerald-400/50  hover:-translate-y-2 hover:${card_bg_hover} hover:shadow-lg dark:hover:shadow-emerald-400 dark:hover:ring-4 dark:hover:ring-emerald-300 hover:shadow-indigo-400 hover:ring-4 hover:ring-indigo-500 dark:${card_bg_dark} dark:shadow-sm dark:hover:${card_bg_dark_hover} dark:hover:${card_head_text_dark_hover} ${card_para_text} transform ease-in-out duration-300`}>
       {/* <img className={card_data.css} src={getImage(card_data.imageCode)} alt={card_data.imageInvalid}/> */}
       <div className="py-3 px-3 relative flex flex-row items-end justify-items-end h-full transform transition-transform duration-100 group-hover:-translate-x-2 group-hover:-translate-y-2 group">
         <div className="visible group-hover:hidden ">
@@ -79,7 +79,7 @@ export default function Card(props) {
           {
           card_data.headCount 
           ? 
-          <p className={`sm:text-xs lg:text-sm font-thin dark:${card_para_text_dark_hover}`}>
+          <p className={`text-xs font-thin dark:${card_para_text_dark_hover}`}>
             Children Enrolled: {card_data.headCount }
           </p>
           : 
@@ -87,7 +87,7 @@ export default function Card(props) {
           {
           card_data.gradCount 
           ? 
-          <p className={`sm:text-xs lg:text-sm font-thin dark:${card_para_text_dark_hover}`}>
+          <p className={`text-xs font-thin dark:${card_para_text_dark_hover}`}>
             Children Graduated: {card_data.gradCount }
           </p>
           : 
@@ -113,7 +113,6 @@ export default function Card(props) {
             <></>
           )}
       </div>
-      
     </div>
   );
 }
